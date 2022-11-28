@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const instrumentSchema = new Schema({
     name: { type: String, required: true },
-    sortInst: Number
+    index: Number
 }, {
     timestamps: true
 });
