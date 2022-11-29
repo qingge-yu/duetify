@@ -1,25 +1,14 @@
 import * as piecesAPI from '../../utilities/pieces-api'
-import { useState, useEffect } from 'react'
-import DuetList from '../../components/DuetList/DuetList'
+import { Link } from "react-router-dom"
 
-export default function AllDuetsPage({ user, setUser }) {
-    const [duetItems, setDuetItems] = useState([])
-
-    useEffect(function () {
-        async function getDuets() {
-            const duets = await piecesAPI.getAll()
-            setDuetItems(duets)
-        }
-        getDuets()
-    }, [])
-
+export default function AllDuetsPage({ duetItems }) {
     return (
-        <div>
-            <DuetList duetItems={duetItems} />
-        </div>
+        duetItems.map((duet, idx) =>
+            <div key={idx}>
+                <Link to={`/all/${duet.name}`}>
+                    {duet.name}
+                </Link>
+            </div>
+        )
     )
-
-
-
-
 }
