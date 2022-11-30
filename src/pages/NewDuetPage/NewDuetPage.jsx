@@ -4,6 +4,8 @@ import * as piecesAPI from '../../utilities/pieces-api'
 import { Link, useNavigate } from 'react-router-dom';
 import InstrumentList1 from '../../components/InstrumentList1/InstrumentList1';
 import InstrumentList2 from '../../components/InstrumentList2/InstrumentList2';
+import Cart from '../../components/Cart/Cart'
+import './NewDuetPage.css'
 
 export default function NewDuetPage({ }) {
     const [instItems, setInstItems] = useState([])
@@ -26,7 +28,7 @@ export default function NewDuetPage({ }) {
     }, [])
 
     return (
-        <main>
+        <div className='NewDuetPage'>
             <div>
                 <InstrumentList1
                     instruments={instrumentsRef.current}
@@ -41,7 +43,10 @@ export default function NewDuetPage({ }) {
                     setActiveInst2={setActiveInst2}
                 />
             </div>
-        </main>
+            <div>
+                <Cart />
+            </div>
+        </div>
     )
 }
 

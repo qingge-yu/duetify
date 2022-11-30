@@ -12,7 +12,7 @@ export default function NavBar({ user, setUser }) {
         <nav>
             <Link to="/all">All Duets</Link>
             &nbsp; | &nbsp;
-            <Link to="/duets/new">New Duet</Link>
+            <Link to="/duets">New Duet</Link>
             &nbsp; | &nbsp;
             Welcome, {user.name}
             &nbsp; | &nbsp;

@@ -1,20 +1,20 @@
-.InstrumentList1 {
+.InstrumentList2 {
     border: 2px solid black;
     border-radius: 5px;
     width: 20vw;
-    margin-left: 2vw;
-    margin-right: 1.5vw;
+    margin-left: 1.5vw;
+    margin-right: 2vw;
     margin-top: 3vh;
     background-color: rgb(87, 46, 39);
     color: rgb(188, 191, 188);
 }
 
-.Instruments1 h2 {
+.Instruments2 h2 {
     margin-top: 3vh;
     color: rgb(188, 191, 188);
 }
 
-.InstrumentList1 ul {
+.InstrumentList2 ul {
     list-style-type: none;
     line-height: 3.5em;
     font-weight: 600;
@@ -22,7 +22,7 @@
     padding-left: 0;
 }
 
-.InstrumentList1 ul li:hover {
+.InstrumentList2 ul li:hover {
     font-size: 1.4em;
     cursor: grab;
 }
