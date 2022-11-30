@@ -23,6 +23,7 @@ export default function App() {
 
   return (
     <main className="App">
+      <header><img src="https://img.icons8.com/dotty/512/spotify.png" alt="logo" /><h4>Duetify</h4></header>
       {user ?
         <>
           <NavBar user={user} setUser={setUser} />

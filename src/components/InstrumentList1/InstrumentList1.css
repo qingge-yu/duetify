@@ -2,11 +2,14 @@
     border: 2px solid black;
     border-radius: 5px;
     width: 20vw;
+    height: 80vh;
     margin-left: 2vw;
     margin-right: 1.5vw;
     margin-top: 3vh;
-    background-color: rgb(87, 46, 39);
+    background-image: url('https://images.unsplash.com/photo-1537204319452-fdbd29e2ccc7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80');
+    background-size: cover;
     color: rgb(188, 191, 188);
+    overflow-y: scroll;
 }
 
 .Instruments1 h2 {
