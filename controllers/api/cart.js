@@ -1,4 +1,4 @@
-const Duet = require('../../models/instrument')
+const Duet = require('../../models/piece')
 
 module.exports = {
     cart,

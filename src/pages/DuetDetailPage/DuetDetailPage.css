@@ -3,13 +3,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 93.5vh;
     background-image: url('https://images.unsplash.com/photo-1522008224169-e5992bed5fae?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80');
     background-size: cover;
 }
 
 .DuetDetails {
-    background-color: rgb(201, 198, 198);
+    background-image: url('https://images.unsplash.com/photo-1550895030-823330fc2551?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80');
+    background-size: cover;
     padding: 100px;
     border-radius: 15px;
 }

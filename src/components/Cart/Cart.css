@@ -2,11 +2,19 @@
     border: 2px solid black;
     border-radius: 5px;
     width: 50vw;
+    height: 80vh;
     margin-top: 3vh;
+    margin-left: 1vw;
+    margin-right: 3vw;
     background-image: url('https://images.unsplash.com/photo-1550895030-823330fc2551?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80');
+    background-size: cover;
 }
 
 .cartTitle h2 {
     margin-top: 3vh;
     color: rgb(188, 191, 188);
+}
+
+.Cart h1:hover {
+    cursor: grab;
 }

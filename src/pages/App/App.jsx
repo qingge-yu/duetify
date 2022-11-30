@@ -28,7 +28,7 @@ export default function App() {
         <>
           <NavBar user={user} setUser={setUser} />
           <Routes>
-            <Route path="/duets" element={<NewDuetPage user={user} setUser={setUser} />} />
+            <Route path="/duets" element={<NewDuetPage user={user} setUser={setUser} duetItems={duetItems} setDuetItems={setDuetItems} />} />
             <Route path="/all/*" element={<AllDuetsPage duetItems={duetItems} />} />
             <Route path="/all/:duetName" element={<DuetDetailPage duetItems={duetItems} />} />
           </Routes>
@@ -36,6 +36,7 @@ export default function App() {
         :
         <AuthPage setUser={setUser} />
       }
+      <footer>All Rights Reserved, &copy; 2022 Duetify &nbsp;</footer>
     </main>
   );
 }

@@ -8,8 +8,13 @@ header {
   justify-content: center;
   height: 4.5vh;
   gap: 5px;
+  border-bottom: 3px solid black;
 }
 
 header img {
   width: 30px;
+}
+
+footer {
+  height: 2vh;
 }

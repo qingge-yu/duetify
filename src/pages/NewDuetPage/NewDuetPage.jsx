@@ -7,7 +7,7 @@ import InstrumentList2 from '../../components/InstrumentList2/InstrumentList2';
 import Cart from '../../components/Cart/Cart'
 import './NewDuetPage.css'
 
-export default function NewDuetPage({ }) {
+export default function NewDuetPage({ duetItems, setDuetItems }) {
     const [instItems, setInstItems] = useState([])
     const [activeInst1, setActiveInst1] = useState('')
     const [activeInst2, setActiveInst2] = useState('')
@@ -44,7 +44,14 @@ export default function NewDuetPage({ }) {
                 />
             </div>
             <div>
-                <Cart />
+                <Cart
+                    activeInst1={activeInst1}
+                    setActiveInst1={setActiveInst1}
+                    activeInst2={activeInst2}
+                    setActiveInst2={setActiveInst2}
+                    duetItems={duetItems}
+                    setDuetItems={setDuetItems}
+                />
             </div>
         </div>
     )
