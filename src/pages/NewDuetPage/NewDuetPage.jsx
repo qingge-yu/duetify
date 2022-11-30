@@ -20,11 +20,12 @@ export default function NewDuetPage({ duetItems, setDuetItems }) {
             instrumentsRef.current = [...new Set(items.map(item => item.instrument2))]
             setInstItems(items)
             setActiveInst1(instrumentsRef.current[0])
+            setActiveInst2(instrumentsRef.current[0])
         })();
         (async function () {
             const cart = await cartAPI.getCart()
             setCart(cart)
-        })()
+        })();
     }, [])
 
     return (
@@ -49,7 +50,11 @@ export default function NewDuetPage({ duetItems, setDuetItems }) {
                     setActiveInst1={setActiveInst1}
                     activeInst2={activeInst2}
                     setActiveInst2={setActiveInst2}
-                    duetItems={duetItems}
+                    duetItems={duetItems.filter(item => (
+                        item.instrument1 === activeInst1 &&
+                        item.instrument2 === activeInst2 ||
+                        item.instrument1 === activeInst2 &&
+                        item.instrument2 === activeInst1))}
                     setDuetItems={setDuetItems}
                 />
             </div>
