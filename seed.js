@@ -42,7 +42,7 @@ const Piece = require('./models/piece');
     await Piece.deleteMany({})
     const pieces = await Piece.create([
         { name: 'Allegro in C major (Handel, George Frideric)', instrument1: instruments[0].name, instrument2: instruments[0].name, style: styles[0].name, link: 'https://imslp.org/wiki/Allegro_in_C_major_(Handel%2C_George_Frideric)', index: 0 },
-        { name: 'Astrid Duo for Violin and Cello (Sydeman, William Jay)', instrument: instruments[0].name, instrument2: instruments[1].name, style: styles[1].name, link: 'https://imslp.org/wiki/Astrid_Duo_for_Violin_and_Cello_(Sydeman%2C_William_Jay)', index: 1 },
+        { name: 'Astrid Duo for Violin and Cello (Sydeman, William Jay)', instrument1: instruments[0].name, instrument2: instruments[1].name, style: styles[1].name, link: 'https://imslp.org/wiki/Astrid_Duo_for_Violin_and_Cello_(Sydeman%2C_William_Jay)', index: 1 },
         { name: '6 Beginner Piano Duets (Allard, Michel)', instrument1: instruments[2].name, instrument2: instruments[2].name, style: styles[1].name, link: 'https://imslp.org/wiki/6_Beginner_Piano_Duets_(Allard%2C_Michel)', index: 2 },
         { name: 'Bumbling Ostinato (Besset, Julian Raoul)', instrument1: instruments[2].name, instrument2: instruments[2].name, style: styles[1].name, link: 'https://imslp.org/wiki/Bumbling_Ostinato_(Besset%2C_Julian_Raoul)', index: 3 },
         { name: 'Cello Duet (Ruelas Villela, Rodrigo)', instrument1: instruments[1].name, instrument2: instruments[1].name, style: styles[2].name, link: 'https://imslp.org/wiki/Cello_Duet_(Ruelas_Villela%2C_Rodrigo)', index: 4 },

@@ -21,15 +21,13 @@ export default function App() {
     getDuets()
   }, [])
 
-
-
   return (
     <main className="App">
       {user ?
         <>
           <NavBar user={user} setUser={setUser} />
           <Routes>
-            <Route path="/duets/new" element={<NewDuetPage user={user} setUser={setUser} />} />
+            <Route path="/duets" element={<NewDuetPage user={user} setUser={setUser} />} />
             <Route path="/all/*" element={<AllDuetsPage duetItems={duetItems} />} />
             <Route path="/all/:duetName" element={<DuetDetailPage duetItems={duetItems} />} />
           </Routes>
