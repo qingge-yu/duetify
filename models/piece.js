@@ -3,6 +3,7 @@ const Schema = mongoose.Schema;
 
 require('./instrument')
 require('./style')
+require('./user')
 
 const pieceSchema = new Schema({
     name: { type: String, required: true },
@@ -10,6 +11,7 @@ const pieceSchema = new Schema({
     instrument2: { type: Schema.Types.String, ref: 'Instrument' },
     style: { type: Schema.Types.String, ref: 'Style' },
     link: { type: String, required: true },
+    user: { type: Schema.Types.Array, ref: 'User' },
     index: Number
 }, {
     timestamps: true

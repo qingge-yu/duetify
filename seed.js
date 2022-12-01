@@ -99,11 +99,10 @@ const Piece = require('./models/piece');
         { name: 'Suíte para oboé e sax (Dantas, Victor Vitoriano)', instrument1: instruments[6].name, instrument2: instruments[15].name, style: styles[0].name, link: 'https://imslp.org/wiki/Su%C3%ADte_para_obo%C3%A9_e_sax_(Dantas%2C_Victor_Vitoriano)', index: 55 },
         { name: 'Variations on a Theme by Mozart for 2 Pianos (Zhang, Shuwen)', instrument1: instruments[2].name, instrument2: instruments[2].name, style: styles[3].name, link: 'https://imslp.org/wiki/Variations_on_a_Theme_by_Mozart_for_2_Pianos_(Zhang%2C_Shuwen)', index: 56 },
         { name: 'Violin Duet, Op.11 (Freed, Jeffrey Alan)', instrument1: instruments[0].name, instrument2: instruments[10].name, style: styles[2].name, link: 'https://imslp.org/wiki/Violin_Duet%2C_Op.11_(Freed%2C_Jeffrey_Alan)', index: 57 },
-        { name: 'Violin Duet, Op.11 (Freed, Jeffrey Alan)', instrument1: instruments[0].name, instrument2: instruments[0].name, style: styles[2].name, link: 'https://imslp.org/wiki/Violin_Duet%2C_Op.11_(Freed%2C_Jeffrey_Alan)', index: 58 },
-        { name: '18 Violin Duos, Op.38 (Mazas, Jacques Féréol)', instrument1: instruments[0].name, instrument2: instruments[0].name, style: styles[3].name, link: 'https://imslp.org/wiki/18_Violin_Duos%2C_Op.38_(Mazas%2C_Jacques_F%C3%A9r%C3%A9ol)', index: 59 },
-        { name: '39 Violin Duos, Op.85 (Mazas, Jacques Féréol)', instrument1: instruments[0].name, instrument2: instruments[0].name, style: styles[2].name, link: 'https://imslp.org/wiki/39_Violin_Duos%2C_Op.85_(Mazas%2C_Jacques_F%C3%A9r%C3%A9ol)', index: 60 },
-        { name: 'Vivaldi Duo for Violin and Cello (Sydeman, William Jay)', instrument1: instruments[0].name, instrument2: instruments[1].name, style: styles[0].name, link: 'https://imslp.org/wiki/Vivaldi_Duo_for_Violin_and_Cello_(Sydeman%2C_William_Jay)', index: 61 },
-        { name: "William's Duet(Dyson, Peter)", instrument1: instruments[2].name, instrument2: instruments[2].name, style: styles[0].name, link: "https://imslp.org/wiki/William's_Duet_(Dyson%2C_Peter)", index: 62 },
+        { name: '18 Violin Duos, Op.38 (Mazas, Jacques Féréol)', instrument1: instruments[0].name, instrument2: instruments[0].name, style: styles[3].name, link: 'https://imslp.org/wiki/18_Violin_Duos%2C_Op.38_(Mazas%2C_Jacques_F%C3%A9r%C3%A9ol)', index: 58 },
+        { name: '39 Violin Duos, Op.85 (Mazas, Jacques Féréol)', instrument1: instruments[0].name, instrument2: instruments[0].name, style: styles[2].name, link: 'https://imslp.org/wiki/39_Violin_Duos%2C_Op.85_(Mazas%2C_Jacques_F%C3%A9r%C3%A9ol)', index: 59 },
+        { name: 'Vivaldi Duo for Violin and Cello (Sydeman, William Jay)', instrument1: instruments[0].name, instrument2: instruments[1].name, style: styles[0].name, link: 'https://imslp.org/wiki/Vivaldi_Duo_for_Violin_and_Cello_(Sydeman%2C_William_Jay)', index: 60 },
+        { name: "William's Duet(Dyson, Peter)", instrument1: instruments[2].name, instrument2: instruments[2].name, style: styles[0].name, link: "https://imslp.org/wiki/William's_Duet_(Dyson%2C_Peter)", index: 61 },
     ])
 
     process.exit()

@@ -27,12 +27,21 @@
     padding: 10px;
 }
 
-.buttonGoBack {
+.buttonGoAll {
     color: rgb(201, 198, 198);
-    padding: 10px;
-    border-radius: 10px;
+}
+
+.buttonGoFind {
+    color: rgb(201, 198, 198);
+}
+
+.detailPageBtns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    height: 40px;
     background-color: none;
-    margin-top: 30px;
     font-weight: 600;
     font-size: 1.1em;
 }

@@ -1,7 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import * as cartAPI from '../../utilities/cart-api'
 import * as piecesAPI from '../../utilities/pieces-api'
-import { Link, useNavigate } from 'react-router-dom';
 import InstrumentList1 from '../../components/InstrumentList1/InstrumentList1';
 import InstrumentList2 from '../../components/InstrumentList2/InstrumentList2';
 import Cart from '../../components/Cart/Cart'
@@ -11,7 +9,6 @@ export default function NewDuetPage({ duetItems, setDuetItems }) {
     const [instItems, setInstItems] = useState([])
     const [activeInst1, setActiveInst1] = useState('')
     const [activeInst2, setActiveInst2] = useState('')
-    const [cart, setCart] = useState(null)
     const instrumentsRef = useRef([])
 
     useEffect(function () {
@@ -21,10 +18,6 @@ export default function NewDuetPage({ duetItems, setDuetItems }) {
             setInstItems(items)
             setActiveInst1(instrumentsRef.current[0])
             setActiveInst2(instrumentsRef.current[0])
-        })();
-        (async function () {
-            const cart = await cartAPI.getCart()
-            setCart(cart)
         })();
     }, [])
 

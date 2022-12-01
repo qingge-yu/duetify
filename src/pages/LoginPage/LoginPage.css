@@ -1,0 +1,38 @@
+.LoginPage {
+    height: 93vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://images.unsplash.com/photo-1532089006065-de61ca171e56?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80');
+    background-size: cover;
+}
+
+.LoginPageBox {
+    border: 2px solid black;
+    border-radius: 15px;
+    width: 70vw;
+    height: 70vh;
+    background-image: url('https://images.unsplash.com/photo-1550895030-823330fc2551?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonLibrary {
+    color: rgb(184, 184, 184);
+    border: rgb(184, 184, 184);
+    border-radius: 25px;
+    background-color: black;
+    padding: 0 20px;
+    margin: 50px auto;
+}
+
+.buttonFind {
+    color: rgb(184, 184, 184);
+    border: rgb(184, 184, 184);
+    border-radius: 25px;
+    background-color: black;
+    padding: 0 20px;
+}
