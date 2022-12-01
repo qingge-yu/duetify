@@ -7,23 +7,23 @@ export default function DuetDetailPage({ duetItems }) {
     const [youtubeData, setYoutubeData] = useState([])
     const linkName = duetName.replace(/\s+/g, '%20')
 
-    // useEffect(function () {
-    //     fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=${linkName}&key=${process.env.REACT_APP_API_KEY}`)
-    //         .then(response => {
-    //             if (response.ok) {
-    //                 return response.json()
-    //             }
-    //             throw response
-    //         })
-    //         .then(data => {
-    //             console.log(data.items)
-    //             let video = data.items
-    //             setYoutubeData(video)
-    //         })
-    //         .catch(err => {
-    //             console.log('error fetching data' + err)
-    //         })
-    // }, [])
+    useEffect(function () {
+        fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=${linkName}&key=${process.env.REACT_APP_API_KEY}`)
+            .then(response => {
+                if (response.ok) {
+                    return response.json()
+                }
+                throw response
+            })
+            .then(data => {
+                console.log(data.items[0].id)
+                let video = data.items[0].id
+                setYoutubeData(video)
+            })
+            .catch(err => {
+                console.log('error fetching data' + err)
+            })
+    }, [])
 
     return (
         <div className='DuetDetailPage'>
@@ -45,7 +45,7 @@ export default function DuetDetailPage({ duetItems }) {
                     ))
             }
             <div className='youtube'>
-                {/* <img src={`${setYoutubeData.snippet.thumbnails.default.url}`}></img> */}
+                <iframe src={`https://youtube.com/embed/${youtubeData.videoId}`} frameborder="0"></iframe>
             </div>
             <div className='detailPageBtns'>
                 <Link to="/all" className="buttonGoAll">Back To Duet Library</Link>
@@ -55,4 +55,3 @@ export default function DuetDetailPage({ duetItems }) {
     )
 }
 
-// <img src={`${video.snippet.thumbnails.default.url}`}></img>

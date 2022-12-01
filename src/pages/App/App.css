@@ -6,7 +6,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 4.5vh;
+  height: 4vh;
   gap: 5px;
   border-bottom: 3px solid black;
 }
