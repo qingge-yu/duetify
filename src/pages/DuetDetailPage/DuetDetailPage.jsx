@@ -1,13 +1,13 @@
 import { useParams, Link } from 'react-router-dom'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './DuetDetailPage.css'
 
 export default function DuetDetailPage({ duetItems }) {
     const { duetName } = useParams()
-    const [youtube, setYoutube] = useState([])
+    const [youtubeData, setYoutubeData] = useState([])
     const linkName = duetName.replace(/\s+/g, '%20')
 
-    // function findYoutube() {
+    // useEffect(function () {
     //     fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=${linkName}&key=${process.env.REACT_APP_API_KEY}`)
     //         .then(response => {
     //             if (response.ok) {
@@ -16,13 +16,14 @@ export default function DuetDetailPage({ duetItems }) {
     //             throw response
     //         })
     //         .then(data => {
-    //             return data.items
+    //             console.log(data.items)
+    //             let video = data.items
+    //             setYoutubeData(video)
     //         })
     //         .catch(err => {
     //             console.log('error fetching data' + err)
     //         })
-    // }
-    // findYoutube()
+    // }, [])
 
     return (
         <div className='DuetDetailPage'>
@@ -40,14 +41,12 @@ export default function DuetDetailPage({ duetItems }) {
                                 <br />
                                 <a href={`${duet.link}`}>more info at IMSLP website</a>
                             </div>
-                            <div className='youtube'>
-                                {
-                                    // <img src={`${{ youtube }.snippet.thumbnails.default.url}`} key={idx}></img>
-                                }
-                            </div>
                         </div>
                     ))
             }
+            <div className='youtube'>
+                {/* <img src={`${setYoutubeData.snippet.thumbnails.default.url}`}></img> */}
+            </div>
             <div className='detailPageBtns'>
                 <Link to="/all" className="buttonGoAll">Back To Duet Library</Link>
                 <Link to="/duets" className="buttonGoFind">Back To Find Duet</Link>
@@ -55,3 +54,5 @@ export default function DuetDetailPage({ duetItems }) {
         </div >
     )
 }
+
+// <img src={`${video.snippet.thumbnails.default.url}`}></img>
