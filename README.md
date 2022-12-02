@@ -25,7 +25,7 @@
 <hr>
 <br>
 <h2>Getting Started</h2>
-<a href="">Link to deployed app on Heroku</a>
+<a href="https://duetify.herokuapp.com/">Link to deployed app on Heroku</a>
 <br>
 <br>
 <hr>
