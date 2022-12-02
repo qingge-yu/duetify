@@ -9,6 +9,7 @@ import AllDuetsPage from '../AllDuetsPage/AllDuetsPage'
 import NavBar from '../../components/NavBar/NavBar'
 import DuetDetailPage from "../../pages/DuetDetailPage/DuetDetailPage"
 import LoginPage from '../../pages/LoginPage/LoginPage'
+import FavoritesPage from '../../pages/FavoritesPage/FavoritesPage'
 
 export default function App() {
   const [user, setUser] = useState(getUser())
@@ -31,8 +32,9 @@ export default function App() {
           <Routes>
             <Route path="/" element={<LoginPage />} />
             <Route path="/duets" element={<NewDuetPage user={user} setUser={setUser} duetItems={duetItems} setDuetItems={setDuetItems} />} />
-            <Route path="/all/*" element={<AllDuetsPage duetItems={duetItems} />} />
+            <Route path="/all" element={<AllDuetsPage duetItems={duetItems} />} />
             <Route path="/all/:duetName" element={<DuetDetailPage duetItems={duetItems} />} />
+            <Route path="/favorites" element={<FavoritesPage user={user} duetItems={duetItems} />} />
           </Routes>
         </>
         :
