@@ -1,10 +1,11 @@
-.AllDuetsPage {
+.FavoritesPage {
     background-image: url('https://images.unsplash.com/photo-1506423456648-c11ccb27338d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1476&q=80');
-    background-size: contain;
+    background-size: cover;
     padding-top: 30px;
+    height: 93vh;
 }
 
-.AllDuetCards {
+.allFavCards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -13,7 +14,7 @@
     padding-top: 30px;
 }
 
-.DuetCard {
+.favCard {
     border: 1px solid rgb(201, 198, 198);
     border-radius: 5px;
     height: 35vh;
@@ -25,11 +26,11 @@
     background-image: url('https://images.unsplash.com/photo-1507838153414-b4b713384a76?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80')
 }
 
-.AllDuetsPage h1 {
+.FavoritesPage h1 {
     color: rgb(201, 198, 198);
 }
 
-.DuetCard p {
+.favCard p {
     background-color: rgb(201, 198, 198);
     margin-bottom: 0;
     width: 100%;
@@ -38,6 +39,6 @@
     line-height: 2em;
 }
 
-.DuetCard:hover {
+.favCard:hover {
     opacity: 0.9;
 }

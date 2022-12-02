@@ -49,6 +49,11 @@
     font-family: 'Great Vibes', cursive;
 }
 
+.favBtn:focus {
+    background-color: grey;
+    color: black;
+}
+
 .DuetDetails h2 {
     text-decoration: underline;
 }

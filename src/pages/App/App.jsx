@@ -18,11 +18,10 @@ export default function App() {
   const [favList, setFavList] = useState(null)
 
   useEffect(function () {
-    async function getDuets() {
+    (async function () {
       const duets = await piecesAPI.getAll()
       setDuetItems(duets)
-    }
-    getDuets()
+    })()
   }, [])
 
   async function handleAddToFavList(duetId) {

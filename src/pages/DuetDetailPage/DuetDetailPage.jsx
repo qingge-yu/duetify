@@ -7,22 +7,22 @@ export default function DuetDetailPage({ duetItems, handleAddToFavList }) {
     const [youtubeData, setYoutubeData] = useState([])
     const linkName = duetName.replace(/\s+/g, '%20')
 
-    // useEffect(function () {
-    //     fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=${linkName}&key=${process.env.REACT_APP_API_KEY}`)
-    //         .then(response => {
-    //             if (response.ok) {
-    //                 return response.json()
-    //             }
-    //             throw response
-    //         })
-    //         .then(data => {
-    //             let video = data.items[0].id
-    //             setYoutubeData(video)
-    //         })
-    //         .catch(err => {
-    //             console.log('error fetching data' + err)
-    //         })
-    // }, [])
+    useEffect(function () {
+        fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=${linkName}&key=${process.env.REACT_APP_API_KEY}`)
+            .then(response => {
+                if (response.ok) {
+                    return response.json()
+                }
+                throw response
+            })
+            .then(data => {
+                let video = data.items[0].id
+                setYoutubeData(video)
+            })
+            .catch(err => {
+                console.log('error fetching data' + err)
+            })
+    }, [])
 
     return (
         <div className='DuetDetailPage'>
