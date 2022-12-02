@@ -1,6 +1,4 @@
 import { Link } from 'react-router-dom'
-import NewDuetPage from '../NewDuetPage/NewDuetPage'
-import AllDuetsPage from '../AllDuetsPage/AllDuetsPage'
 import './LoginPage.css'
 
 export default function LoginPage() {

@@ -11,16 +11,6 @@
     overflow-y: scroll;
 }
 
-.cartTitle>h2 {
-    margin-top: 3vh;
-    color: rgb(188, 191, 188);
-}
-
-.Cart h1:hover {
-    cursor: grab;
-    font-weight: 400;
-}
-
 .duetPiece {
     border-bottom: 2px solid rgb(188, 191, 188);
     margin: 0 2vw 5vw 2vw;
@@ -28,7 +18,17 @@
     height: 10vh;
 }
 
+.cartTitle>h2 {
+    margin-top: 3vh;
+    color: rgb(188, 191, 188);
+}
+
 .duetPiece:hover {
     color: rgb(101, 44, 36);
     text-shadow: 3px 3px 5px rgb(188, 191, 188);
+}
+
+.Cart h1:hover {
+    cursor: grab;
+    font-weight: 400;
 }

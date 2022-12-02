@@ -1,7 +1,3 @@
-.App {
-  text-align: center;
-}
-
 header {
   display: flex;
   align-items: center;
@@ -11,11 +7,15 @@ header {
   border-bottom: 3px solid black;
 }
 
+footer {
+  height: 2vh;
+  border-top: 3px solid black;
+}
+
 header img {
   width: 30px;
 }
 
-footer {
-  height: 2vh;
-  border-top: 3px solid black;
+.App {
+  text-align: center;
 }

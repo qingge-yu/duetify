@@ -48,3 +48,8 @@ a {
     margin-top: 7rem;
     margin-bottom: 1rem;
 }
+
+.navLink:hover {
+    text-shadow: 4px 4px 10px rgb(188, 191, 188);
+    font-size: 1.2em;
+}

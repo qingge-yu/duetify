@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import './App.css';
 import * as piecesAPI from '../../utilities/pieces-api'
+import * as favoritesAPI from '../../utilities/favorites-api'
 import { getUser } from '../../utilities/users-service'
 import AuthPage from '../AuthPage/AuthPage'
 import NewDuetPage from '../NewDuetPage/NewDuetPage'
@@ -14,6 +15,7 @@ import FavoritesPage from '../../pages/FavoritesPage/FavoritesPage'
 export default function App() {
   const [user, setUser] = useState(getUser())
   const [duetItems, setDuetItems] = useState([])
+  const [favList, setFavList] = useState(null)
 
   useEffect(function () {
     async function getDuets() {
@@ -22,6 +24,11 @@ export default function App() {
     }
     getDuets()
   }, [])
+
+  async function handleAddToFavList(duetId) {
+    const updatedFavList = await favoritesAPI.addPieceToFav(duetId)
+    setFavList(updatedFavList)
+  }
 
   return (
     <main className="App">
@@ -33,8 +40,8 @@ export default function App() {
             <Route path="/" element={<LoginPage />} />
             <Route path="/duets" element={<NewDuetPage user={user} setUser={setUser} duetItems={duetItems} setDuetItems={setDuetItems} />} />
             <Route path="/all" element={<AllDuetsPage duetItems={duetItems} />} />
-            <Route path="/all/:duetName" element={<DuetDetailPage duetItems={duetItems} />} />
-            <Route path="/favorites" element={<FavoritesPage user={user} duetItems={duetItems} />} />
+            <Route path="/all/:duetName" element={<DuetDetailPage duetItems={duetItems} handleAddToFavList={handleAddToFavList} />} />
+            <Route path="/favorites" element={<FavoritesPage favList={favList} setFavList={setFavList} />} />
           </Routes>
         </>
         :

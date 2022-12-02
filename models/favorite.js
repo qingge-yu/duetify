@@ -7,12 +7,6 @@ const favoriteSchema = new Schema({
     favPieces: []
 }, { timestamps: true })
 
-favoriteSchema.statics.getFav = function (userId) {
-    return this.find(
-        { user: userId }
-    )
-}
-
 favoriteSchema.methods.addPieceToFav = async function (duetName) {
     const list = this
     const piece = await mongoose.model('Piece').find({ name: duetName })

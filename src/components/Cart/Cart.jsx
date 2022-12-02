@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 export default function Cart({ activeInst1, setActiveInst1, activeInst2, setActiveInst2, duetItems }) {
 
-
     const handleToggleInst1 = () => {
         setActiveInst1(null)
     }
