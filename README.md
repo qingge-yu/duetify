@@ -13,7 +13,7 @@
 <br>
 <h2>Technologies Used</h2>
 <ul>
-    <li>JSX</li>
+    <li>JavaScript</li>
     <li>React</li>
     <li>CSS</li>
     <li>Express.js</li>
