@@ -24,6 +24,10 @@ export default function App() {
     })()
   }, [])
 
+  function refreshPage() {
+    window.location.reload(false)
+  }
+
   async function handleAddToFavList(duetId) {
     const updatedFavList = await favoritesAPI.addPieceToFav(duetId)
     setFavList(updatedFavList)
@@ -37,8 +41,8 @@ export default function App() {
           <NavBar user={user} setUser={setUser} />
           <Routes>
             <Route path="/" element={<LoginPage />} />
-            <Route path="/duets" element={<NewDuetPage user={user} setUser={setUser} duetItems={duetItems} setDuetItems={setDuetItems} />} />
-            <Route path="/all" element={<AllDuetsPage duetItems={duetItems} />} />
+            <Route path="/duets" element={<NewDuetPage user={user} setUser={setUser} duetItems={duetItems} setDuetItems={setDuetItems} onClick={refreshPage} />} />
+            <Route path="/all" element={<AllDuetsPage duetItems={duetItems} onClick={refreshPage} />} />
             <Route path="/all/:duetName" element={<DuetDetailPage duetItems={duetItems} handleAddToFavList={handleAddToFavList} />} />
             <Route path="/favorites" element={<FavoritesPage favList={favList} setFavList={setFavList} />} />
           </Routes>
